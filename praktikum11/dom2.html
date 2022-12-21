@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit elemen</title>
+</head>
+<body>
+    <h1>BelejarDOM Javascript</h1>
+
+    <div id="box1">
+        <div id="p1">paragraf 1</div>
+    </div>
+
+    <script>
+        let box = document.getElementById("box1");
+        let p1 = document.getElementById("p1");
+
+        //buat elemen
+        let el = document.createElement("h2");
+        let text = document.createTextNode("belajar web");
+
+        //buat isi h2
+        el.appendChild(text);
+
+        //sisipin element h3 ke box
+        box.appendChild(el);
+
+        //hapus elemen
+        // box.removeChild(p1);
+
+        // ganti elemen
+        let el2 = document.createElement("h1");
+        let text2 = document.createElement("belajar DDP");
+
+        el2.appendChild(text2);
+        // replaceChild memuat 2 atribut, yang pertama elemen baru yang ke2 elemen lama
+        box.replaceChild(el2, p1);
+    </script>
+</body>
+</html>
